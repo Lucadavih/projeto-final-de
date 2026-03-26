@@ -12,11 +12,12 @@ def ingestion(configs):
     Consome dados da API https://randomuser.me
     Retorna um DataFrame pandas.
     """
+    #buscando do arquivo config
+    url = configs["api"]["url"]
 
-    url = "https://randomuser.me/api/"
 
     params = {
-        "results": 10  # mínimo exigido
+         "results": configs["api"]["results"]
     }
 
     response = requests.get(url, params=params)
@@ -39,7 +40,7 @@ def validation_inputs(df, configs):
     Valida dados antes de salvar no banco.
     """
 
-    logging.info("Iniciando validação dos dados")
+    logging.info("Iniciando preparação dos dados")
 
     # valida dataframe vazio
     if df.empty:
@@ -60,7 +61,7 @@ def validation_inputs(df, configs):
             logging.error(f"Coluna ausente: {col}")
             raise ValueError(f"Coluna ausente: {col}")
 
-    logging.info("Dados corretos")
+    logging.info("Dados salvos com sucesso no SQLite")
 
     return True
 
@@ -95,10 +96,13 @@ def preparation(df, configs):
     ]
 
     # ---------- Salvar SQLite ----------
-    conn = sqlite3.connect("assets/database.db")
+    db_path = configs["database"]["path"]
+    table_name = configs["database"]["table"]
+
+    conn = sqlite3.connect(db_path)
 
     df.to_sql(
-        "users",
+        table_name,
         conn,
         if_exists="replace",
         index=False
