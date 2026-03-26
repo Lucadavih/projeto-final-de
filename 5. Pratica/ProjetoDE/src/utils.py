@@ -1,6 +1,5 @@
 import pandas as pd
 import requests
-import utils as utils
 import logging
 import sqlite3
 import re
@@ -40,7 +39,7 @@ def validation_inputs(df, configs):
     Valida dados antes de salvar no banco.
     """
 
-    logging.info("Iniciando preparação dos dados")
+    logging.info("Iniciando validação dos dados")
 
     # valida dataframe vazio
     if df.empty:
@@ -61,7 +60,7 @@ def validation_inputs(df, configs):
             logging.error(f"Coluna ausente: {col}")
             raise ValueError(f"Coluna ausente: {col}")
 
-    logging.info("Dados salvos com sucesso no SQLite")
+    logging.info("Dados corretos")
 
     return True
 
