@@ -21,8 +21,7 @@ def ingestion(configs):
 
     response = requests.get(url, params=params)
 
-    if response.status_code != 200:
-        raise Exception("Erro ao consumir API")
+    response.raise_for_status()
 
     data = response.json()["results"]
 
@@ -78,6 +77,8 @@ def preparation(df, configs):
     validation_inputs(df, configs)
     
     # ---------- Renomear colunas ----------
+    logging.info("Iniciando preparação dos dados")
+    
     df = df.rename(columns={
         "name.first": "first_name",
         "name.last": "last_name",
@@ -98,16 +99,14 @@ def preparation(df, configs):
     db_path = configs["database"]["path"]
     table_name = configs["database"]["table"]
 
-    conn = sqlite3.connect(db_path)
-
+   with sqlite3.connect(db_path) as conn:
     df.to_sql(
         table_name,
         conn,
         if_exists="replace",
         index=False
     )
-
-    conn.close()
-
+    
+    logging.info("Dados salvos com sucesso no SQLite")
     return True
 
