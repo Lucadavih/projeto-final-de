@@ -74,8 +74,9 @@ def preparation(df, configs):
         - Remove caracter especial
         - Salva em SQLite (assets/)
     """
-     # ---------- validação dos inputs ----------
+    # ---------- validação dos inputs ----------
     validation_inputs(df, configs)
+    
     # ---------- Renomear colunas ----------
     df = df.rename(columns={
         "name.first": "first_name",
