@@ -10,12 +10,12 @@ cd projeto-final-de/5.\ Pratica/ProjetoDE
 ## 2 Criar ambiente virtual
 python -m venv .venv
 
-```bash
+```bash```
 source .venv/Scripts/activate
 
 ## 3 Instalar dependências
 
-```bash
+```bash```
 pip install -r requirements.txt
 
 ## 4 Executar o pipeline
@@ -33,14 +33,14 @@ assets/database.db
 ## 5 Executar usando tox
 O tox cria um ambiente isolado e executa o projeto automaticamente: 
 
-```bash
+```bash```
 tox
 
 Se tudo estiver correto, será aprensentado no terminal:
-```congratulations :)
+```congratulations``` :)
 
 
-TREE do projeto:
+## TREE do projeto:
 
 ProjetoDE/
 │
