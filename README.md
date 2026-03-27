@@ -42,7 +42,8 @@ Se tudo estiver correto, será aprensentado no terminal:
 
 ## TREE do projeto:
 
-```ProjetoDE/
+```
+ProjetoDE/
 │
 ├── assets/
 │   ├── config.yml
