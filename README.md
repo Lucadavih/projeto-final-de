@@ -3,7 +3,7 @@
 
 ### 1 Clonar o repositório
 
-```bash
+```bash```
 git clone https://github.com/Lucadavih/projeto-final-de.git
 cd projeto-final-de/5.\ Pratica/ProjetoDE
 
