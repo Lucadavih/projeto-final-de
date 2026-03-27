@@ -1,11 +1,26 @@
-# Como executar
 
-no bash:
-- python -m venv .venv
-- source .venv/Scripts/activate
-- pip install -r requirements.txt
-- python src/app.py
-* O banco SQLite será criado automaticamente em assets/database.db.
+# Como executar o projeto
+
+### 1️⃣ Clonar o repositório
+
+```bash
+git clone https://github.com/Lucadavih/projeto-final-de.git
+cd projeto-final-de/5.\ Pratica/ProjetoDE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
