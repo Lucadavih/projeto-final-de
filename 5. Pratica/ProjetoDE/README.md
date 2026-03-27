@@ -53,9 +53,9 @@ ProjetoDE/
 │   ├── core.py
 │   └── utils.py
 │
+├── README.md
 ├── requirements.txt
-├── tox.ini
-└── README.md
+└── tox.ini
 ```
 
 ---
