@@ -11,6 +11,7 @@
 
 ```bash```
 git clone https://github.com/Lucadavih/projeto-final-de.git
+
 cd projeto-final-de/5.\ Pratica/ProjetoDE
 
 ## 2 Criar ambiente virtual
