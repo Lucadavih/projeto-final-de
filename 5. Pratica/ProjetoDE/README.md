@@ -40,6 +40,8 @@ assets/database.db
 ## 5 Executar usando tox
 O tox cria um ambiente isolado e executa o projeto automaticamente: 
 
+```instalar o Tox``` pip install tox
+
 ```bash```
 tox
 
