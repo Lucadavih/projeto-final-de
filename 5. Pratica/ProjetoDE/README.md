@@ -1,7 +1,6 @@
 # Integrantes do Grupo:
 - Lucas Silva Santos – RA: 2504094
 - Breno Missias de Oliveira – RA: 2500036
-- Fernanda Sarabando Santolaya – RA: 2502257
 
 ---
 
